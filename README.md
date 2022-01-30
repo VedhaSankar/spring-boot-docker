@@ -8,3 +8,5 @@ sudo snap install intellij-idea-community --classic
 
 Initialize your spring project, by providing your requirements here and download the resulting zip file.
     https://start.spring.io/
+
+https://medium.com/danielpadua/java-spring-boot-intellij-idea-b919b0097a0
