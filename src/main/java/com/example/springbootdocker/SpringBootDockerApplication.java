@@ -5,19 +5,36 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.HashMap;
 import java.util.List;
 
 @SpringBootApplication
 @RestController
 public class SpringBootDockerApplication {
 
+	private Boolean status;
+	private String message;
+	private List data;
+
 	public static void main(String[] args) {
 		SpringApplication.run(SpringBootDockerApplication.class, args);
 	}
 
-	@GetMapping
-	public List <String> hello(){
-		return List.of("Hello", "Apples");
+	public SpringBootDockerApplication(){
 	}
+
+	@GetMapping
+	public HashMap<String, String> sayHello() {
+		HashMap<String, String> map = new HashMap<>();
+		map.put("fruit", "apple");
+		map.put("vegetable", "carrot");
+		map.put("hotel", "trivago");
+		return map;
+	}
+
+//	@GetMapping
+//	public List <String> hello(){
+//		return List.of("Hello", "Apples");
+//	}
 
 }
