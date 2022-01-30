@@ -26,9 +26,17 @@ public class SpringBootDockerApplication {
 	@GetMapping
 	public HashMap<String, String> sayHello() {
 		HashMap<String, String> map = new HashMap<>();
-		map.put("fruit", "apple");
+		map.put("name", "apple");
 		map.put("vegetable", "carrot");
 		map.put("hotel", "trivago");
+		return map;
+	}
+
+	@GetMapping("/city")
+	public HashMap<String, String> getCity() {
+		HashMap<String, String> map = new HashMap<>();
+		map.put("city", "Toronto");
+		map.put("state", "Ontario");
 		return map;
 	}
 
